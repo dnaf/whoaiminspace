@@ -1,0 +1,42 @@
+html, body {
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+body {
+	font-size: 5vmin;
+	background-color: #000000;
+}
+
+a {
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+a:link, a:visited {
+	color: #00ffff;
+}
+
+.particle {
+	/*background-color: #ffffff;
+	width: 2px;
+	height: 2px;*/
+	color: #ffffff;
+	font-size: 3vmin;
+	text-shadow: 4px 4px 4px;
+	z-index: -100;
+}
+
+h1 {
+	color: #ffffff;
+	font-size: 8vmin;
+	text-align: center;
+	z-index: 100;
+	text-shadow: 0 16px 16px;
+}
+span:nth-child(1) { color: #ff0000; }
+span:nth-child(2) { color: #ffff00; }
+span:nth-child(3) { color: #00ff00; }
+span:nth-child(4) { color: #00ffff; }
