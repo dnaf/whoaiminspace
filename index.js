@@ -36,16 +36,19 @@ $("document").ready(function() {
 			var x = Number($(this).css("left").match(/[0-9\.\-]+(?=px)/));
 			var y = Number($(this).css("top").match(/[0-9\.\-]+(?=px)/));
 
+			var ew = $(this).width();
+			var eh = $(this).height();
+
 			$(this).css("left", x + dx * speed);
 			$(this).css("top", y + dy * speed);
 
 			var width = $(this).parent().innerWidth();
 			var height = $(this).parent().innerHeight();
 
-			if ((x < 0 && dx < 0) || (x > width && dx > 0)) {
+			if ((x - ew / 2 <= 0 && dx < 0) || (x + ew / 2 >= width && dx > 0)) {
 				dx = -dx;
 			}
-			if ((y < 0 && dy < 0) || (y > height && dy > 0)) {
+			if ((y - eh / 2 <= 0 && dy < 0) || (y + eh / 2 >= height && dy > 0)) {
 				dy = -dy;
 			}
 			angle = Math.atan2(dx, dy);
