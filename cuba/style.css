@@ -43,9 +43,18 @@ audio {
 	z-index: -10;
 }
 
-#cubacontainercontainer {
+#square {
 	position: fixed;
-	top: 50%;
+	width: 100vmin;
+	height: 100vmin;
+    left: Calc(50% - 50vmin);
+    top: Calc(50% - 50vmin);
+}
+
+#cubacontainercontainer {
+	/*position: fixed;*/
+	position: absolute;
+	top: 45vmin;
 	left: 50%;
 	z-index: 10;
 	transform: translate(-50%, -50%);
@@ -55,6 +64,7 @@ audio {
 }
 
 #cubagif {
+	width: 80vmin;
 	animation: cubagif 0.96s ease;
 	z-index: 10;
 }
@@ -69,14 +79,14 @@ audio {
 	text-align: center;
 }
 #topletters {
-	top: 10%;
+	top: 10vmin;
 }
 #bottomletters {
-	bottom: 30%;
+	bottom: 30vmin;
 }
 .letter {
 	display: inline-block;
-	font-size: 64px;
+	font-size: 10vmin;
 	color: #fff;
 	animation: text 1s infinite cubic-bezier(0.47, 0, 0.47, 1);
 	z-index: 1000;
@@ -114,17 +124,19 @@ audio {
 	display: block;
 	width: 100%;
 	font-family: 'Londrina Outline', sans-serif;
-	font-size: 96px;
+	font-size: 14vmin;
 	font-weight: bold;
 	color: hsl(0, 100%, 50%);
+
+	perspective: 150px;
+	perspective-origin: 50% -8vmin;
 }
 .spacecuba div {
 	animation: spacecubastack infinite 1s cubic-bezier(1, 0, 1, 1) reverse;
 	position: absolute;
-	top: 150%;
+	top: 8vmin;
 	width: 100%;
 	text-align: center;
-	display: block;
 	text-shadow: 0 0 32px;
 }
 
