@@ -1,5 +1,5 @@
 var bpm = 125;
-var offset = -0.1;
+var offset = -0.05;
 
 var bgm = $("#bgm").get(0);
 
@@ -242,7 +242,7 @@ eventFunctions = {
 		});
 	},
 	"bighit": function(beat, args) {
-		var length = ((args[1] || 3) * (60 / bpm) - 0.1) * 1000;
+		var length = ((args[1] || 3) * (60 / bpm) - 0.1) * 1000 / (bgm.playbackRate != 0 ? bgm.playbackRate : 100000000000);
 		$("body").css("background-color", args[2] || "#fff0ff")
 			.animate({"background-color": args[3] || "#000000"}, length);
 	}
