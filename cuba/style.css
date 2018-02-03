@@ -77,6 +77,7 @@ audio {
 	display: block;
 	width: 100%;
 	text-align: center;
+	text-shadow: white 0 0 16px;
 }
 #topletters {
 	top: 10vmin;
