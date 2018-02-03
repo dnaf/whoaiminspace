@@ -1,5 +1,5 @@
 var bpm = 125;
-var offset = -0.05;
+var offset = -0.18;
 
 var bgm = $("#bgm").get(0);
 
